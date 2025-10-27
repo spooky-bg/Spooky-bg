@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#222222">
+<title>Spooky & B.G. Do-All and Wall Art</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #111 url('images/wall1.jpg') center/cover no-repeat;
+    color: #eee;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #111;
+    border-bottom: 2px solid #ff9800;
+  }
+
+  header img {
+    height: 60px;
+  }
+
+  nav a {
+    color: #ff9800;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ff9800;
+  }
+
+  section {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  h1, h2 {
+    text-align: center;
+    text-shadow: 0 0 10px #ff9800;
+    margin-bottom: 1rem;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  .hero {
+    background: #222 url('images/wall1.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 2rem;
+    text-shadow: 2px 2px 8px #000;
+  }
+
+  .hero button {
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    background: #ff9800;
+    color: #111;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .hero button:hover {
+    background: #ffa733;
+  }
+
+  #about img {
+    display: block;
+    max-width: 400px;
+    width: 80%;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff9800;
+  }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .portfolio img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #ff9800;
+  }
+
+  .portfolio img:hover {
+    transform: scale(1.05);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    color: #fff;
+  }
+
+  th, td {
+    padding: 0.75rem;
+    border: 1px solid #ff9800;
+    text-align: center;
+  }
+
+  th {
+    background: #ff9800;
+    color: #111;
+  }
+
+  footer {
+    background: #111;
+    text-align: center;
+    padding: 2rem;
+    border-top: 2px solid #ff9800;
+  }
+
+  form {
+    max-width: 500px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  form input, form textarea, form button {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+  }
+
+  form input, form textarea {
+    width: 100%;
+  }
+
+  form button {
+    background: #ff9800;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  form button:hover {
+    background: #ffa733;
+  }
+
+  /* Lightbox */
+  #lightbox {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.9);
+  }
+
+  #lightbox img {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+  }
+
+  #lightbox span {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Spooky & B.G. Logo">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#services">Services & Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Transform Your Walls Into Art</h1>
+  <p>Custom plaster wall art, stencil designs, and feature walls for your home or office in Lincoln, NE.</p>
+  <button onclick="window.location.href='#contact'">Book Your Wall Transformation</button>
+</section>
+
+<section id="about">
+  <h2>About Spooky & B.G.</h2>
+  <p>Hi, I’m Spooky — turning walls into living art with street-style vibes and plaster mastery. Each piece combines graffiti energy with artistic precision, making every wall unique.</p>
+  <img src="images/about.jpg" alt="Spooky at work">
+</section>
+
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="portfolio">
+    <img src="images/wall1.jpg" alt="2x2 wall example">
+    <img src="images/wall2.jpg" alt="4x4 wall example">
+    <img src="images/wall3.jpg" alt="Stencil design example">
+    <img src="images/wall4.jpg" alt="Finished wall example">
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services & Pricing</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Wall Size</th>
+        <th>Sq Ft</th>
+        <th>Good ($)</th>
+        <th>Better ($)</th>
+        <th>Best ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>2x2</td><td>4</td><td>100</td><td>150</td><td>200</td></tr>
+      <tr><td>4x4</td><td>16</td><td>200</td><td>250</td><td>300–400</td></tr>
+      <tr><td>4x6</td><td>24</td><td>250</td><td>300</td><td>400</td></tr>
+      <tr><td>6x6</td><td>36</td><td>300–350</td><td>350–450</td><td>450–550</td></tr>
+      <tr><td>5x8</td><td>40</td><td>350</td><td>450</td><td>550</td></tr>
+      <tr><td>10x10</td><td>100</td><td>600–650</td><td>750</td><td>800–900</td></tr>
+    </tbody>
+  </table>
+  <p style="text-align:center; margin-top:1rem;">Hourly Rate: <strong>$20/hr</strong> for custom designs</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form action="mailto:spooky92opc@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <img src="images/logo.png" alt="Logo" style="width:100px; margin-bottom:10px;">
+  <p>© 2025 Spooky & B.G. Do-All and Wall Art | Lincoln, NE</p>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span onclick="document.getElementById('lightbox').style.display='none'">&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+// Lightbox for portfolio
+const portfolioImages = document.querySelectorAll('.portfolio img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+portfolioImages.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'block';
+    lightboxImg.src = img.src;
+  });
+});
+
+// Service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
