@@ -12,6 +12,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+  .stencil-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.stencil-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ff9800;
+  transition: transform 0.3s;
+}
+
+.stencil-gallery img:hover {
+  transform: scale(1.05);
+}
   body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -212,16 +229,27 @@
   </nav>
 </header>
 
-<section id="home" class="hero">
-  <h1>Transform Your Walls Into Art</h1>
-  <p>Custom plaster wall art, stencil designs, and feature walls for your home or office in Lincoln, NE.</p>
-  <button onclick="window.location.href='#contact'">Book Your Wall Transformation</button>
+<section id="stencils">
+  <h2>Stencil Gallery</h2>
+  <div class="stencil-gallery">
+    <img src="images/stencils/stencil1.jpg" alt="Stencil Design 1">
+    <img src="images/stencils/stencil2.jpg" alt="Stencil Design 2">
+    <img src="images/stencils/stencil3.jpg" alt="Stencil Design 3">
+    <img src="images/stencils/stencil4.jpg" alt="Stencil Design 4">
+  </div>
 </section>
 
-<section id="about">
-  <h2>About Spooky & B.G.</h2>
-  <p>Hi, I’m Spooky — turning walls into living art with street-style vibes and plaster mastery. Each piece combines graffiti energy with artistic precision, making every wall unique.</p>
-  <img src="images/stencil1.jpg" alt="Spooky at work">
+<section id="about" style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem;">
+  <div style="flex: 1 1 300px;">
+    <h2>About Spooky & B.G.</h2>
+    <p>Hi, I’m Spooky — turning walls into living art with street-style vibes and plaster mastery. Each piece combines graffiti energy with artistic precision, making every wall unique.</p>
+  </div>
+
+  <div class="stencil-gallery" style="flex: 1 1 300px;">
+    <img src="images/stencils/stencil1.jpg" alt="Stencil design 1">
+    <img src="images/stencils/stencil2.jpg" alt="Stencil design 2">
+    <img src="images/stencils/stencil3.jpg" alt="Stencil design 3">
+  </div>
 </section>
 
 <section id="portfolio">
