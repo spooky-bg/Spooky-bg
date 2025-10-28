@@ -14,20 +14,25 @@
 <style>
   .stencil-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(17, 17, 17, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ff9800;
 }
 
 .stencil-gallery img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 0 20px #ff9800;
-  transition: transform 0.3s;
+  box-shadow: 0 0 15px #ff9800;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .stencil-gallery img:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 25px #ffa733;
 }
   body {
     margin: 0;
@@ -239,10 +244,24 @@ header img {
 <section id="about" style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem;">
   <div style="flex: 1 1 300px;">
     <h2>About Spooky & B.G.</h2>
-    <p>Hi, I’m Spooky — turning walls into living art with street-style vibes and plaster mastery. Each piece combines graffiti energy with artistic precision, making every wall unique.</p>
-  </div>
+    <p>
+      Hi, I’m Spooky — turning walls into living art with street-style vibes and plaster mastery. 
+      Each piece combines graffiti energy with artistic precision, making every wall unique.
+    </p>
 
- <details>
+    <!-- Stencil Folder -->
+    <details style="margin-top: 1.5rem;">
+      <summary style="font-size: 1.3em; font-weight: bold; cursor: pointer; color: #ff9800;">
+        🎨 View Stencil Designs
+      </summary>
+      <div class="stencil-gallery">
+        <img src="stencils/stencil1.PNG" alt="Stencil Design 1">
+        <img src="stencils/stencil2.PNG" alt="Stencil Design 2">
+        <img src="stencils/stencil3.PNG" alt="Stencil Design 3">
+      </div>
+    </details>
+  </div>
+</section>
   <summary style="font-size: 1.3em; font-weight: bold; cursor: pointer;">
     🎨 View Stencil Designs
   </summary>
